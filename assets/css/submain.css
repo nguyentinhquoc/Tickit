@@ -1,0 +1,200 @@
+/* <+====================CUSTOMER====================+> */
+
+@font-face {
+  font-family: 'Manrope-blod';
+  src: url('../fonts/manrope-extrabold.otf');
+}
+
+@font-face {
+  font-family: 'Manrope-medium';
+  src: url('../fonts/manrope-medium.otf');
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Manrope-medium', sans-serif;
+  max-width: 100%;
+}
+
+:root {
+  --primary-color: #FF8142;
+  --primary-color-transparent: rgba(255, 129, 66, 0.1);
+  --secondary-color: #00334E;
+  --secondary-color-transparent: rgba(0, 51, 78, 0.1);
+  --danger-color: #FF5836;
+  --danger-color-transparent: rgba(255, 88, 54, 0.1);
+  --info-color: #0FC1DA;
+  --info-color-transparent: rgba(15, 193, 218, 0.1);
+  --success-color: #19CFA2;
+  --success-color-transparent: rgba(25, 207, 162, 0.1);
+  --muted-color: #919BA4;
+  --muted-color-transparent: rgba(145, 155, 164, 0.1);
+}
+
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.bg-secondary {
+  background-color: var(--secondary-color);
+}
+
+.text-secondary {
+  color: var(--secondary-color);
+}
+
+.bg-danger {
+  background-color: var(--danger-color);
+}
+
+.text-danger {
+  color: var(--danger-color);
+}
+
+.bg-info {
+  background-color: var(--info-color);
+}
+
+.text-info {
+  color: var(--info-color);
+}
+
+.bg-success {
+  background-color: var(--success-color);
+}
+
+.text-success {
+  color: var(--success-color);
+}
+
+.bg-muted {
+  background-color: var(--muted-color);
+}
+
+.text-muted {
+  color: var(--muted-color);
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-start {
+  justify-content: flex-start !important;
+}
+
+.justify-content-end {
+  justify-content: flex-end !important;
+}
+
+.justify-content-center {
+  justify-content: center !important;
+}
+
+.justify-content-between {
+  justify-content: space-between !important;
+}
+
+.justify-content-around {
+  justify-content: space-around !important;
+}
+
+.justify-content-evenly {
+  justify-content: space-evenly !important;
+}
+
+/* <+====================header====================+> */
+header {
+  padding: 20px;
+}
+
+.header--icon {
+  margin: 5px;
+}
+
+/* <+====================slider====================+> */
+/* <+====================POSEIDON====================+><+====================POSEIDON====================+> */
+.header--filter {
+  padding: 14px;
+  background-color: var(--muted-color-transparent);
+}
+
+.header--filter .header__top--filter,
+.header--filter .header__bottom--filter {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.header--filter .header__top--filter>div,
+.header--filter .header__bottom--filter>div {
+  margin: 5px 4px;
+}
+
+.header--filter .header__top--filter::-webkit-scrollbar,
+.header--filter .header__bottom--filter::-webkit-scrollbar,
+.content::-webkit-scrollbar {
+  display: none;
+}
+
+.header--filter label {
+  padding: 3px 20px;
+  border-radius: 16px;
+  font-size: 14px;
+  line-height: 28px;
+  border: 1px solid var(--muted-color);
+}
+
+.header--filter input[type="checkbox"] {
+  display: none;
+}
+
+.header--filter .header__top--filter input[type="checkbox"]:checked+label {
+  color: var(--info-color);
+  border: 1px solid var(--info-color);
+  background-color: var(--info-color-transparent);
+}
+
+.header--filter .header__bottom--filter input[type="checkbox"]:checked+label {
+  color: var(--danger-color);
+  border: 1px solid var(--danger-color);
+  background-color: var(--danger-color-transparent);
+}
+
+.content {
+  padding: 14px;
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.content div {
+  opacity: 0.5;
+  text-decoration: underline;
+  padding-right: 20px;
+}
+
+.content .tag {
+  font-size: 14px;
+}
+
+.content .close {
+  color: red;
+}
+
+.tag--filter {
+  align-items: center;
+  padding: 14px;
+}
+
+.tag--filter .icon--filter {
+  margin: 7px;
+}

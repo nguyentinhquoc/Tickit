@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Scroll</title>
+    <style>
+        .scroll-container {
+            width: 100%;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        .content {
+            display: inline-block;
+            width: 300px;
+            height: 200px;
+            margin-right: 10px;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll-container">
+        <div class="content">Content 1</div>
+        <div class="content">Content 2</div>
+        <div class="content">Content 3</div>
+        <div class="content">Content 4</div>
+        <div class="content">Content 5</div>
+    </div>
+</body>
+</html>

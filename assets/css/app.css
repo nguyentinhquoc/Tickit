@@ -10,6 +10,7 @@
   src: url('../fonts/manrope-medium.otf');
 }
 
+
 * {
   margin: 0px;
   padding: 0px;
@@ -73,6 +74,7 @@
 .text-muted {
   color: var(--muted-color);
 }
+
 .d-flex {
   display: flex;
 }
@@ -100,12 +102,14 @@
 .justify-content-evenly {
   justify-content: space-evenly !important;
 }
+
 /* <+====================header====================+> */
-header{
-  padding:20px;
+header {
+  padding: 20px;
 }
-.header--icon{
+
+.header--icon {
   margin: 5px;
 }
-/* <+====================slider====================+> */
 
+/* <+====================slider====================+> */

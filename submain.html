@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/submain.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        .close {
+            margin-left: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="d-flex justify-content-between">
+            <div>
+                <img src="assets/svg/logo.svg" alt="">
+            </div>
+            <div class="d-flex">
+                <div class="header--icon">
+                    <img src="assets/svg/icon/search.svg" alt="">
+                </div>
+                <div class="header--icon">
+                    <img src="assets/svg/icon/map.svg" alt="">
+                </div>
+                <div class="header--icon">
+                    <img src="assets/svg/icon/fliter.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="header--filter">
+            <div class="header__top--filter">
+                <div>
+                    <input type="checkbox" id="Id1">
+                    <label for="Id1">Tất cả</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="Id2">
+                    <label for="Id2">Được yêu thích</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="Id3">
+                    <label for="Id3">Bản độc quyền</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="Id4">
+                    <label for="Id4">Bản độc quyền 3</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="Id5">
+                    <label for="Id5">Bản độc quyền 4</label>
+                </div>
+            </div>
+            <div class="header__bottom--filter">
+                <div>
+                    <input type="checkbox" id="Id7">
+                    <label for="Id7">Kịch</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="Id8">
+                    <label for="Id8">Tuồng</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="Id9">
+                    <label for="Id9">Trèo</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="Id10">
+                    <label for="Id10">Cải lương</label>
+                </div>
+            </div>
+        </div>
+        <div class="tag--filter d-flex">
+            <div class="icon--filter">
+                <img src="assets/svg/icon/fliter2.svg" alt="">
+            </div>
+            <div class="content d-flex" id="tagContainer">
+            </div>
+        </div>
+        <div></div>
+    </main>
+    <script>
+        $(document).ready(function() {
+            $('input[type="checkbox"]').change(function() {
+                const label = $(this).next('label').text();
+                const id = $(this).attr('id');
+                if (this.checked) {
+                    $('#tagContainer').append(`<div class="tag-item-${id}"><span class="tag">${label}</span> <span class="close" data-id="${id}">X</span></div>`);
+                } else {
+                    $(`.tag-item-${id}`).remove();
+                }
+            });
+
+            $(document).on('click', '.close', function() {
+                const id = $(this).data('id');
+                $(`#${id}`).prop('checked', false);
+                $(this).parent().remove();
+            });
+        });
+    </script>
+</body>
+</html>
