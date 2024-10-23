@@ -2,12 +2,10 @@ $(document).ready(function() {
     let currentIndex = 0;
     const slides = $('.slide');
     const totalSlides = slides.length;
-
     function showSlide(index) {
         const newTransform = -index * 100; // Tính toán giá trị lùi để giữ khoảng cách
         $('.slides').css('transform', `translateX(${newTransform}%)`);
     }
-
     // Sự kiện vuốt
     let startX;
     let isMoving = false; // Biến trạng thái để theo dõi việc vuốt
@@ -22,7 +20,7 @@ $(document).ready(function() {
         const diffX = startX - moveX; // Tính độ dịch chuyển
 
         // Chỉ thực hiện chuyển slide khi vuốt đủ xa
-        if (Math.abs(diffX) > 200) { 
+        if (Math.abs(diffX) > 200) {
             isMoving = true; // Đánh dấu là đang vuốt
 
             if (diffX > 0) {
@@ -31,7 +29,7 @@ $(document).ready(function() {
                     currentIndex++; // Chuyển sang slide tiếp theo
                 } else {
                     // Vuốt trái từ slide cuối cùng, nhảy về slide đầu tiên
-                    currentIndex = 0; 
+                    currentIndex = 0;
                 }
             } else {
                 // Vuốt phải
@@ -39,7 +37,7 @@ $(document).ready(function() {
                     currentIndex--; // Giảm chỉ số
                 } else {
                     // Vuốt phải từ slide đầu tiên, nhảy về slide cuối cùng
-                    currentIndex = totalSlides - 1; 
+                    currentIndex = totalSlides - 1;
                 }
             }
             showSlide(currentIndex); // Hiển thị slide mới
