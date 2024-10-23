@@ -20,14 +20,11 @@
   border-radius: 15px; /* Bo góc cho hình ảnh */
 }
 
-
 .catalogs {
   display: flex; /* Sử dụng flexbox cho bố cục */
   justify-content: space-around; /* Căn giữa các item */
   align-items: center; /* Căn giữa theo chiều dọc */
-  padding: 15px;
-  background-color: #EBFDFF;
-  ; /* Màu nền nhẹ */
+  padding: 15px; /* Màu nền nhẹ */
   font-size: 10px;
 }
 
@@ -35,7 +32,6 @@
   text-align: center; /* Căn giữa văn bản và hình ảnh */
   cursor: pointer; /* Thay đổi con trỏ khi hover */
 }
-
 
 .catalogs .active {
   color: var(--danger-color);
@@ -47,7 +43,7 @@
 }
 .recent-content {
   background-color: #f9f9f9; /* Màu nền nhẹ */
-  padding-top: 10px;
+  padding: 15px 15px;
 }
 
 .recent-content h2 {
@@ -56,50 +52,68 @@
   padding-bottom: 5px; /* Khoảng cách dưới đường */
 }
 
-.content-item {
+.recent-content .content-item {
   display: flex; /* Sử dụng flexbox để bố trí */
   align-items: center; /* Căn giữa theo chiều dọc */
   justify-content: space-between; /* Căn giữa các mục */
 }
 
-.content-item img {
-  width: 100px; /* Kích thước hình ảnh */
-  height: auto; /* Tự động điều chỉnh chiều cao */
+.recent-content .content-item img {
+  height: 50px;
+  width: 50px; /* Kích thước hình ảnh */
   border-radius: 5px; /* Bo góc cho hình ảnh */
 }
 
-.content-details {
+.recent-content .content-details {
   flex-grow: 1; /* Để chiếm không gian còn lại */
   margin-left: 15px; /* Khoảng cách giữa hình ảnh và văn bản */
+  font-weight: 400;
 }
 
-.content-details h3 {
-    font-weight: 500;
+.recent-content .content-details h3 {
+  font-weight: 500;
   margin: 0; /* Xóa margin của tiêu đề */
 }
 
-.arrow {
+.recent-content .arrow {
   font-size: 24px; /* Kích thước của mũi tên */
   color: var(--muted-color); /* Màu sắc mũi tên */
   align-self: flex-start; /* Căn giữa mũi tên */
 }
-
-
-.event-slider {
-  position: relative;
-  overflow: hidden; /* Ẩn phần thừa */
-  display: flex; /* Sử dụng flexbox cho bố cục */
-  transition: transform 0.5s ease; /* Hiệu ứng chuyển động */
+.event {
+  padding: 15px; /* Thêm khoảng cách cho nội dung */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Thêm bóng cho phần sự kiện */
+  margin-bottom: 20px; /* Khoảng cách giữa các phần sự kiện */
 }
 
+.event .title {
+  padding-bottom: 10px; /* Khoảng cách cho tiêu đề */
+  font-weight: bold; /* In đậm tiêu đề */
+}
+
+.event-slider {
+  width: 100%;
+  overflow: auto;
+  display: flex; /* Sử dụng flexbox cho bố cục */
+  transition: transform 0.5s ease; /* Hiệu ứng chuyển động */
+  /* white-space: nowrap; */
+}
+.event-slider::-webkit-scrollbar {
+  display: none;
+}
 .event-slide {
-  min-width: 100%; /* Chiếm toàn bộ chiều rộng */
+  min-width: 48%; /* Chiếm toàn bộ chiều rộng */
   transition: opacity 0.5s ease; /* Hiệu ứng chuyển động cho độ mờ */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Thêm bóng cho thẻ */
 }
 
 .event-card {
+  position: relative; /* Thêm position relative để đặt các phần tử bên trong */
+  height: 280px;
+  width: calc(100% - 5px);
   border-radius: 10px; /* Bo góc cho thẻ sự kiện */
   overflow: hidden; /* Ẩn phần thừa */
+  background-color: #ffffff; /* Nền trắng cho thẻ */
 }
 
 .event-card img {
@@ -109,29 +123,139 @@
 }
 
 .event-details {
-  padding: 10px;
+  padding-left: 7px; /* Thêm khoảng cách cho nội dung */
+  padding-right: 2px;
+}
+.event-details p {
+  font-weight: 400;
+  font-size: 10px;
+  color: var(--muted-color); /* Màu chữ cho các thông tin khác */
+}
+.event-details h5 {
+  height: 52px;
+  font-weight: 600;
+  font-size: 12px;
+  color: #333; /* Màu chữ cho tiêu đề */
+  overflow: hidden; /* Ẩn phần thừa */
+  display: -webkit-box; /* Hiển thị dưới dạng box */
+  -webkit-line-clamp: 3; /* Giới hạn số dòng hiển thị */
+  -webkit-box-orient: vertical; /* Định hướng theo chiều dọc */
+  line-height: 16.39px;
+}
+
+.event-details h3 {
+  font-size: 16px; /* Kích thước chữ tiêu đề */
+  margin: 10px 0; /* Thêm khoảng cách cho tiêu đề */
+  color: #333; /* Màu chữ cho tiêu đề */
 }
 
 .event-type {
-  background-color: #d0f0c0; /* Màu nền cho loại sự kiện */
-  padding: 5px;
-  border-radius: 5px;
+  margin-bottom: 5px;
+  padding: 2px 5px; /* Thêm khoảng cách cho loại sự kiện */
+  border-radius: 5px; /* Bo góc cho loại sự kiện */
   display: inline-block; /* Hiển thị như một khối */
+  font-weight: bold; /* Làm chữ in đậm */
+  color: #ffffff; /* Màu chữ */
+  font-size: 8px;
 }
 
-.arrow {
+.event .arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   font-size: 24px;
   cursor: pointer;
   z-index: 10;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.7
+  ); /* Nền trắng trong suốt cho mũi tên */
+  border-radius: 50%;
+  /* Bo góc cho mũi tên */
+  padding: 10px; /* Thêm khoảng cách cho mũi tên */
+}
+.view-more {
+  text-decoration: none;
+  font-weight: 300;
+  color: var(--info-color);
+}
+.event-time {
+  color: #7e869e; /* Màu sắc cho thời gian */
+}
+.event .price {
+  text-align: right;
+  margin-right: 5px;
 }
 
-.left-arrow {
-  left: 10px;
+.event .original-price {
+  height: 17px;
+  font-size: 10px;
+  color: #7e869e; /* Màu sắc cho giá gốc */
+  text-decoration: line-through; /* Gạch ngang cho giá gốc */
 }
-
-.right-arrow {
-  right: 10px;
+.event .real-price {
+  color: #919ba4;
+  font-size: 12px; /* Kích thước chữ cho giá */
+  font-weight: 400;
+}
+.event .real-price span {
+  font-size: 14px;
+  /* Kích thước chữ cho giá */
+  font-weight: 700;
+  color: #ff5836;
+}
+.event .price span {
+  color: #ff5836; /* Màu sắc nổi bật cho giá đặc biệt */
+  font-weight: bold;
+  /* Làm chữ in đậm */
+}
+.heart-checkbox {
+  display: none; /* Ẩn checkbox gốc */
+}
+.heart-icon {
+  position: absolute;
+  /* Đặt vị trí tuyệt đối cho biểu tượng trái tim */
+  top: 5px; /* Điều chỉnh khoảng cách từ trên */
+  right: 5px; /* Điều chỉnh khoảng cách từ bên phải */
+  cursor: pointer; /* Thay đổi con trỏ khi di chuột lên */
+  transition: fill 0.3s; /* Hiệu ứng chuyển động khi đổi màu */
+}
+.heart-checkbox:checked + .heart-icon path {
+  fill: red; /* Màu đỏ khi được chọn */
+  stroke: red;
+}
+.checkbox-container {
+  display: flex;
+  gap: 10px; /* Khoảng cách giữa các checkbox */
+  margin-bottom: 5px;
+}
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  /* Canh giữa nội dung theo chiều dọc */
+  cursor: pointer; /* Con trỏ khi hover */
+  padding: 5px 15px;
+  /* Thêm khoảng cách trong label */
+  border: 2px solid transparent; /* Đặt border mặc định là transparent */
+  border-radius: 25px; /* Bo góc cho khung */
+  transition: border-color 0.3s ease; /* Hiệu ứng chuyển màu */
+}
+.checkbox {
+  display: none; /* Ẩn checkbox mặc định */
+}
+.checkbox-custom {
+  color: #000; /* Màu chữ khi checkbox được chọn */
+  font-weight: 500; /* Đặt trọng lượng chữ */
+  font-size: 11px;
+}
+.checkbox-label {
+  border: 1px solid #000;
+}
+.checkbox:checked + .checkbox-custom {
+  color: #00bfff;
+}
+.checkbox:checked + .checkbox-label {
+  border: 1px solid #00bfff;
 }
