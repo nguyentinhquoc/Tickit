@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/app.css">
-    <link rel="stylesheet" href="assets/css/submain.css">
+    <link rel="stylesheet" href="assets/css/Sub-Main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <style>
         .close {
@@ -14,6 +15,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <div class="d-flex justify-content-between">
@@ -33,6 +35,7 @@
             </div>
         </div>
     </header>
+    <!-- <+====================header====================+> -->
     <main>
         <div class="header--filter">
             <div class="header__top--filter">
@@ -74,6 +77,18 @@
                     <input type="checkbox" id="Id10">
                     <label for="Id10">Cải lương</label>
                 </div>
+                <div>
+                    <input type="checkbox" id="Id11">
+                    <label for="Id11">Cải lương</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="Id12">
+                    <label for="Id12">Cải lương</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="Id13">
+                    <label for="Id13">Cải lương</label>
+                </div>
             </div>
         </div>
         <div class="tag--filter d-flex">
@@ -83,26 +98,20 @@
             <div class="content d-flex" id="tagContainer">
             </div>
         </div>
-        <div></div>
+        <section class="section__list--tickit" >
+            <article>
+                <div>
+                    <img class="thumail-Id1" src="assets/image/number3.jpg" alt="" >
+                </div>
+                <div>
+                </div>
+            </article>
+            <article>
+                <img src="assets/image/number3.jpg" alt="" >
+            </article>
+        </section>
     </main>
-    <script>
-        $(document).ready(function() {
-            $('input[type="checkbox"]').change(function() {
-                const label = $(this).next('label').text();
-                const id = $(this).attr('id');
-                if (this.checked) {
-                    $('#tagContainer').append(`<div class="tag-item-${id}"><span class="tag">${label}</span> <span class="close" data-id="${id}">X</span></div>`);
-                } else {
-                    $(`.tag-item-${id}`).remove();
-                }
-            });
-
-            $(document).on('click', '.close', function() {
-                const id = $(this).data('id');
-                $(`#${id}`).prop('checked', false);
-                $(this).parent().remove();
-            });
-        });
-    </script>
+    <script src="assets/js/Sub-Main.js"></script>
 </body>
+
 </html>

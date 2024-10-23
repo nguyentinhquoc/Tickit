@@ -10,7 +10,6 @@
   src: url('../fonts/manrope-medium.otf');
 }
 
-
 * {
   margin: 0px;
   padding: 0px;
@@ -20,11 +19,74 @@
 
 :root {
   --primary-color: #FF8142;
+  --primary-color-transparent: rgba(255, 129, 66, 0.1);
   --secondary-color: #00334E;
+  --secondary-color-transparent: rgba(0, 51, 78, 0.1);
   --danger-color: #FF5836;
+  --danger-color-transparent: rgba(255, 88, 54, 0.1);
   --info-color: #0FC1DA;
+  --info-color-transparent: rgba(15, 193, 218, 0.1);
   --success-color: #19CFA2;
+  --success-color-transparent: rgba(25, 207, 162, 0.1);
   --muted-color: #919BA4;
+  --muted-color-transparent: rgba(145, 155, 164, 0.1);
+}
+
+.container {
+  max-width: 100%;
+  /* Chiếm 100% chiều rộng */
+  margin-left: auto;
+  /* Căn giữa */
+  margin-right: auto;
+  /* Căn giữa */
+  padding-left: 15px;
+  /* Khoảng cách bên trái */
+  padding-right: 15px;
+  /* Khoảng cách bên phải */
+}
+
+/* Tối đa chiều rộng cho các kích thước màn hình */
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+    /* Chiều rộng tối đa cho màn hình nhỏ */
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+    /* Chiều rộng tối đa cho màn hình vừa */
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+    /* Chiều rộng tối đa cho màn hình lớn */
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+    /* Chiều rộng tối đa cho màn hình rất lớn */
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+    /* Chiều rộng tối đa cho màn hình siêu lớn */
+  }
+}
+
+.container-fluid {
+  width: 100%;
+  /* Chiếm 100% chiều rộng */
+  margin-left: auto;
+  margin-right: auto;
+  /* Căn giữa */
 }
 
 .bg-primary {
@@ -103,6 +165,21 @@
   justify-content: space-evenly !important;
 }
 
+.thumail-Id1 {
+  width: 167px;
+  height: 112px;
+}
+
+.thumail-Id2 {
+  width: 112px;
+  height: 167px;
+}
+
+.thumail-Id3 {
+  width: 150px;
+  height: 180px;
+}
+
 /* <+====================header====================+> */
 header {
   padding: 20px;
@@ -111,5 +188,3 @@ header {
 .header--icon {
   margin: 5px;
 }
-
-/* <+====================slider====================+> */
