@@ -1,36 +1,46 @@
 .slide-container {
   position: relative;
-  overflow: hidden; /* Ẩn phần thừa */
+  overflow: hidden;
+  /* Ẩn phần thừa */
 }
 
 .slides {
-  display: flex; /* Sử dụng flexbox cho bố cục */
-  transition: transform 0.5s ease; /* Hiệu ứng chuyển động */
+  display: flex;
+  /* Sử dụng flexbox cho bố cục */
+  transition: transform 0.5s ease;
+  /* Hiệu ứng chuyển động */
 }
 
 .slide {
-  min-width: 100%; /* Giảm kích thước để có khoảng trống cho phần thừa */
-  transition: opacity 0.5s ease; /* Hiệu ứng chuyển động cho độ mờ */
+  min-width: 100%;
+  /* Giảm kích thước để có khoảng trống cho phần thừa */
+  transition: opacity 0.5s ease;
+  /* Hiệu ứng chuyển động cho độ mờ */
 }
 
 .slide img {
-  width: calc(100% - 12px); /* Kích thước hình ảnh lớn hơn để lấp đầy slide */
+  width: calc(100% - 12px);
+  /* Kích thước hình ảnh lớn hơn để lấp đầy slide */
   height: auto;
   margin: 6px;
-  border-radius: 15px; /* Bo góc cho hình ảnh */
+  border-radius: 15px;
+  /* Bo góc cho hình ảnh */
 }
 
 .catalogs {
   display: flex; /* Sử dụng flexbox cho bố cục */
   justify-content: space-around; /* Căn giữa các item */
-  align-items: center; /* Căn giữa theo chiều dọc */
+  align-items: center; 
   padding: 15px; /* Màu nền nhẹ */
+
   font-size: 10px;
 }
 
 .catalogs .nav-item {
-  text-align: center; /* Căn giữa văn bản và hình ảnh */
-  cursor: pointer; /* Thay đổi con trỏ khi hover */
+  text-align: center;
+  /* Căn giữa văn bản và hình ảnh */
+  cursor: pointer;
+  /* Thay đổi con trỏ khi hover */
 }
 
 .catalogs .active {
@@ -38,19 +48,27 @@
 }
 
 .catalogs .nav-item span {
-  display: block; /* Hiển thị văn bản như một khối */
-  color: var(--secondary-color); /* Màu chữ cho văn bản */
+  display: block;
+  /* Hiển thị văn bản như một khối */
+  color: var(--secondary-color);
+  /* Màu chữ cho văn bản */
 }
+
 .recent-content {
   background-color: #f9f9f9; /* Màu nền nhẹ */
   padding: 15px 15px;
+
 }
 
 .recent-content h2 {
-  margin-bottom: 10px; /* Khoảng cách dưới tiêu đề */
-  font-weight: bold; /* Đậm */
-  padding-bottom: 5px; /* Khoảng cách dưới đường */
+  margin-bottom: 10px;
+  /* Khoảng cách dưới tiêu đề */
+  font-weight: bold;
+  /* Đậm */
+  padding-bottom: 5px;
+  /* Khoảng cách dưới đường */
 }
+
 
 .recent-content .content-item {
   display: flex; /* Sử dụng flexbox để bố trí */
@@ -79,6 +97,7 @@
   font-size: 24px; /* Kích thước của mũi tên */
   color: var(--muted-color); /* Màu sắc mũi tên */
   align-self: flex-start; /* Căn giữa mũi tên */
+
 }
 .event {
   padding: 15px; /* Thêm khoảng cách cho nội dung */
@@ -100,8 +119,10 @@
 }
 .event-slider::-webkit-scrollbar {
   display: none;
+
 }
 .event-slide {
+
   min-width: 48%; /* Chiếm toàn bộ chiều rộng */
   transition: opacity 0.5s ease; /* Hiệu ứng chuyển động cho độ mờ */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Thêm bóng cho thẻ */
@@ -112,12 +133,14 @@
   border-radius: 10px; /* Bo góc cho thẻ sự kiện */
   overflow: hidden; /* Ẩn phần thừa */
   background-color: #ffffff; /* Nền trắng cho thẻ */
+
 }
 
 .event-card img {
   width: 100%;
   height: auto;
-  border-radius: 10px; /* Bo góc cho hình ảnh */
+  border-radius: 10px;
+  /* Bo góc cho hình ảnh */
 }
 
 .event-details {
@@ -148,6 +171,7 @@
 }
 
 .event-type {
+
   margin-bottom: 5px;
   padding: 2px 5px; /* Thêm khoảng cách cho loại sự kiện */
   border-radius: 5px; /* Bo góc cho loại sự kiện */
@@ -155,6 +179,7 @@
   font-weight: bold; /* Làm chữ in đậm */
   color: #ffffff; /* Màu chữ */
   font-size: 8px;
+
 }
 
 .view-more-container {
@@ -180,6 +205,7 @@
   text-align: right;
   margin-right: 5px;
 }
+
 
 .event .original-price {
   height: 17px;
@@ -251,3 +277,4 @@
 .checkbox:checked + .checkbox-label {
   border: 1px solid #00bfff;
 }
+
