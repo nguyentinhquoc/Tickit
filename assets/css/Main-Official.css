@@ -109,8 +109,6 @@
 
 .event-card {
   position: relative; /* Thêm position relative để đặt các phần tử bên trong */
-  height: 280px;
-  width: calc(100% - 5px);
   border-radius: 10px; /* Bo góc cho thẻ sự kiện */
   overflow: hidden; /* Ẩn phần thừa */
   background-color: #ffffff; /* Nền trắng cho thẻ */
@@ -132,7 +130,7 @@
   color: var(--muted-color); /* Màu chữ cho các thông tin khác */
 }
 .event-details h5 {
-  height: 52px;
+  /* height: 35px; */
   font-weight: 600;
   font-size: 12px;
   color: #333; /* Màu chữ cho tiêu đề */
@@ -159,28 +157,22 @@
   font-size: 8px;
 }
 
-.event .arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 24px;
-  cursor: pointer;
-  z-index: 10;
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.7
-  ); /* Nền trắng trong suốt cho mũi tên */
-  border-radius: 50%;
-  /* Bo góc cho mũi tên */
-  padding: 10px; /* Thêm khoảng cách cho mũi tên */
+.view-more-container {
+  align-items: center; /* Căn giữa dọc */
+  cursor: pointer; /* Hiện con trỏ khi di chuột qua */
 }
+
 .view-more {
-  text-decoration: none;
-  font-weight: 300;
-  color: var(--info-color);
+  color: #00bfff; /* Màu chữ */
+  font-size: 14px; /* Kích thước chữ */
+  margin-right: 2px; /* Khoảng cách bên phải để cách mũi tên */
 }
+
+.event .arrow {
+  font-size: 28px;
+  color: #00bfff; /* Màu sắc mũi tên */
+}
+
 .event-time {
   color: #7e869e; /* Màu sắc cho thời gian */
 }
@@ -191,18 +183,19 @@
 
 .event .original-price {
   height: 17px;
+  line-height: 20px;
   font-size: 10px;
   color: #7e869e; /* Màu sắc cho giá gốc */
   text-decoration: line-through; /* Gạch ngang cho giá gốc */
 }
 .event .real-price {
   color: #919ba4;
-  font-size: 12px; /* Kích thước chữ cho giá */
+  line-height: 20px;
+  font-size: 14px; /* Kích thước chữ cho giá */
   font-weight: 400;
 }
 .event .real-price span {
   font-size: 14px;
-  /* Kích thước chữ cho giá */
   font-weight: 700;
   color: #ff5836;
 }
@@ -228,27 +221,26 @@
 }
 .checkbox-container {
   display: flex;
-  gap: 10px; /* Khoảng cách giữa các checkbox */
-  margin-bottom: 5px;
+  gap: 5px; /* Khoảng cách giữa các checkbox */
+  margin-bottom: 8px;
 }
 .checkbox-label {
-  display: flex;
   align-items: center;
-  /* Canh giữa nội dung theo chiều dọc */
+  justify-content: center;
   cursor: pointer; /* Con trỏ khi hover */
-  padding: 5px 15px;
-  /* Thêm khoảng cách trong label */
-  border: 2px solid transparent; /* Đặt border mặc định là transparent */
-  border-radius: 25px; /* Bo góc cho khung */
-  transition: border-color 0.3s ease; /* Hiệu ứng chuyển màu */
-}
+  border: 1px solid rgba(255, 252, 252, 0.5); /* 0.1 là mức độ mờ */
+  padding: 3px 21px 3px 21px;
+  gap: 10px;
+  border-radius: 16px;
+} 
 .checkbox {
   display: none; /* Ẩn checkbox mặc định */
 }
 .checkbox-custom {
   color: #000; /* Màu chữ khi checkbox được chọn */
   font-weight: 500; /* Đặt trọng lượng chữ */
-  font-size: 11px;
+  font-size: 14px;
+  text-align: center;
 }
 .checkbox-label {
   border: 1px solid #000;

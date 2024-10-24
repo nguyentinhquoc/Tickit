@@ -159,7 +159,9 @@
 .align-items-center {
   align-items: center;
 }
-
+.text-decoration-none {
+  text-decoration: none;
+}
 .thumail-Id1 {
   width: 167px;
   height: 112px;
@@ -171,6 +173,10 @@
 .thumail-Id3 {
   width: 150px;
   height: 180px;
+}
+.thumail-Id4 {
+  width: 167px;
+  height: 280px;
 }
 /* <+====================header====================+> */
 header {
