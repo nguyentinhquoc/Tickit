@@ -40,23 +40,23 @@
         <div class="header--filter">
             <div class="header__top--filter">
                 <div>
-                    <input type="checkbox" id="Id1">
-                    <label for="Id1">Tất cả</label>
+                    <input  type="radio" id="all"  name="genre" checked>
+                    <label for="all">Tất cả</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="Id2">
+                    <input type="radio" id="Id2" name="genre">
                     <label for="Id2">Được yêu thích</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="Id3">
+                    <input type="radio" id="Id3" name="genre">
                     <label for="Id3">Bản độc quyền</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="Id4">
+                    <input type="radio" id="Id4" name="genre">
                     <label for="Id4">Bản độc quyền 3</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="Id5">
+                    <input type="radio" id="Id5" name="genre">
                     <label for="Id5">Bản độc quyền 4</label>
                 </div>
             </div>
@@ -96,6 +96,7 @@
                 <img src="assets/svg/icon/fliter2.svg" alt="">
             </div>
             <div class="content d-flex" id="tagContainer">
+                <div class="tag-item tag-radio" id="tag--all tag-radio"><span class="tag">Tất cả</span> <span class="close" data-id="all">X</span></div>
             </div>
         </div>
         <section class="section__list--tickit" >
@@ -104,10 +105,13 @@
                     <img class="thumail-Id1" src="assets/image/number3.jpg" alt="" >
                 </div>
                 <div>
+                    <p>Bản độc quyền</p>
+                    <h4>Vé xem múa rối nước đặc sắc tại Hà Nội</h4>
+
                 </div>
             </article>
             <article>
-                <img src="assets/image/number3.jpg" alt="" >
+                <img class="thumail-Id1" src="assets/image/number3.jpg" alt="" >
             </article>
         </section>
     </main>
